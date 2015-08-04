@@ -32,6 +32,17 @@
 
     <build>
         <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.5.5</version>
+            <configuration>
+              <descriptors>
+                <descriptor>src/assembly/repository.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </plugin>
+          <!--
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
@@ -44,7 +55,7 @@
                             <goal>branch</goal>
                         </goals>
                         <configuration>
-                            <!-- lets choose the name of the version in the git repository where we will create the branch -->
+                            <!- lets choose the name of the version in the git repository where we will create the branch ->
                             <branchName>1.0.</branchName>
                             <gitUrl>http://admin:admin@postamac.local:8181/git/fabric</gitUrl>
                             <oldBranchName>1.0</oldBranchName>
@@ -53,6 +64,7 @@
                     </execution>
                 </executions>
             </plugin>
+          -->
         </plugins>
     </build>
 </project>
