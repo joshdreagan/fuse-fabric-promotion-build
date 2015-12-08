@@ -37,6 +37,7 @@
             <artifactId>maven-assembly-plugin</artifactId>
             <version>2.5.5</version>
             <configuration>
+              <attach>false</attach>
               <descriptors>
                 <descriptor>src/assembly/repository.xml</descriptor>
               </descriptors>
